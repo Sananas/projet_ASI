@@ -77,11 +77,13 @@ Appuyer sur **Basées sur les données** et **Calculées sur les emprises native
 
 Visualisation de la donnée
 ------
-Pour visualiser les données, cliquer sur **Visualisation des données**, puis choisissez votre cliquer sur la colonne OpenLayer correspondant à votre couche shapefile. Vous visualisez maintenant la donnée !
+Pour visualiser les données, cliquer sur **Visualisation des données**, puis OpenLayer à droite de la couche *ne_110m_ocean.shp*. 
 
 | Titles        | Common Format           | All Format  |
 | ------------- |:-------------:| -----:|
-| database     | **OpenLayers** KML GML |    |
+| *ne_110m_ocean.shp*     | **OpenLayers** KML GML |    |
+
+Vous visualisez maintenant la donnée !
 
 Interface d'administration sous PG ADMIN
 ------
