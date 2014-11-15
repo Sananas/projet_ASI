@@ -41,15 +41,15 @@ Le lancement prend quelques minutes. Le mot de passe sera demandé deux fois:
 
 Une fois terminé, assurez-vous que les containers ont bien été créés. Ils sont normalement listés à la fin du script.
 
-**Note** : Si l’un des containers ne s’affichent pas, vous devez alors trouver une nouvelle image sur le site Github. Veillez à choisir les images les plus populaires et lire chacun des readME, avant tout téléchargement.
+**Note** : Si l’un des containers ne s’affiche pas, vous devez alors trouver une nouvelle image sur le site Github. Veillez à choisir les images les plus populaires et lire chacun des readME, avant tout téléchargement.
 
 Vous devez ensuite modifier le script **runScript.sh** en indiquant la nouvelle image postGIS (IMAGE_NAME) ou Geoserver (IMAGE_NAME_GEOSERVER).
 
-Récupérer l’adresse IP du container postGIS qui s’est affiché à la fin du script. Notez là, nous la réutiliserons bientôt.
+Récupérez l’adresse IP du container postGIS qui s’est affichée à la fin du script. Notez là, nous la réutiliserons bientôt.
 
 Connexion au Geoserver
 ---
-Le Geoserver a convenablement été lancé par le script. Vous pouvez maintenant accéder à l’interface de gestion du Geoserver. Pour cela, ouvrir un navigateur web et entrer comme url, localhost:2207 
+Le Geoserver a convenablement été lancé par le script. Vous pouvez maintenant accéder à l’interface de gestion du Geoserver. Pour cela, ouvrez un navigateur web et entrez comme url, localhost:2207 .
 
 Voici les informations pour vous connecter au Geoserver :
 
@@ -57,7 +57,7 @@ Voici les informations pour vous connecter au Geoserver :
 
 * **Mot de passe** : geoserver
 
-Cliquer ensuite sur créer un nouvel Entrepôt et choisissez Postgis. Cette étape va vous permettre de connecter PostGIS sur le Geoserver pour pouvoir publier des couches ShapeFile.
+Cliquea ensuite sur créer un nouvel Entrepôt et choisissez Postgis. Cette étape va vous permettre de connecter PostGIS sur le Geoserver pour pouvoir publier des couches ShapeFile.
 
 ____
 * **Nom de la source de données** : database
@@ -70,14 +70,14 @@ ____
 
 * **Passwd** : postgres
 ____
-Valider, vous avez maintenant connecté votre base PostGIS. Cliquer ensuite sur **Publier**, à droite de **database**. 
-Appuyer sur **Basées sur les données** et **Calculées sur les emprises natives** dans la partie *Emprise native* et *emprise géographique*.
+Validez, vous avez maintenant connecté votre base PostGIS. Cliquez ensuite sur **Publier**, à droite de **database**. 
+Appuyez sur **Basées sur les données** et **Calculées sur les emprises natives** dans la partie *Emprise native* et *emprise géographique*.
 
 
 
 Visualisation de la donnée
 ------
-Pour visualiser les données, cliquer sur **Visualisation des données**, puis OpenLayer à droite de la couche *ne_110m_ocean.shp*. 
+Pour visualiser les données, cliquez sur **Visualisation des données**, puis OpenLayer à droite de la couche *ne_110m_ocean.shp*. 
 
 | Titles        | Common Format           | All Format  |
 | ------------- |:-------------:| -----:|
@@ -88,7 +88,7 @@ Vous visualisez maintenant la donnée !
 Interface d'administration sous PG ADMIN
 ------
 
-Pour acceder à l'interface d'administration de votre serveur de base de données PostgresSQL / GIS, ouvrez PGAdmin, et configurer une nouvelle connexion à une base de donnée.
+Pour acceder à l'interface d'administration de votre serveur de base de données PostgresSQL / GIS, ouvrez PGAdmin, et configurez une nouvelle connexion à une base de donnée.
 
 * **Nom** : database
 
@@ -100,4 +100,4 @@ Pour acceder à l'interface d'administration de votre serveur de base de donnée
 
 * **Mot de passe** : postgres
 
-Valider, puis rendez-vous dans la partie Schema de votre database pour voir vos données !
+Validez, puis rendez-vous dans la partie Schema de votre database pour voir vos données !
