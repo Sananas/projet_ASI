@@ -35,11 +35,11 @@ Le script établira un lien entre la base PostGIS créée et le Geoserver. Le sc
 
 `docker@boot2docker: $  /bin/sh runScript.sh`
 
-Le lancement prend quelques minutes. Le mot de passe sera demandé demandés deux fois:
+Le lancement prend quelques minutes. Le mot de passe sera demandé deux fois:
 
 `PASSWORD : postgres`
 
-Une fois terminée, assurez-vous que les containers ont bien été créés. Ils sont normalement listés à la fin du script.
+Une fois terminé, assurez-vous que les containers ont bien été créés. Ils sont normalement listés à la fin du script.
 
 **Note** : Si l’un des containers ne s’affichent pas, vous devez alors trouver une nouvelle image sur le site Github. Veillez à choisir les images les plus populaires et lire chacun des readME, avant tout téléchargement.
 
