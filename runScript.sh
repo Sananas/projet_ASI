@@ -20,8 +20,8 @@ echo "== Launching postgreSQL image and waiting 2 seconds ..."
 docker run --name ${SERVER_NAME} -p 5432:5432 -d -t ${IMAGE_NAME}
 
 echo "=== Create two dynamics containers"
-docker run --link postgis:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -f /vagrant/database.sql'
-docker run --link postgis:db -ti -v /vagrant:/vagrant jamesbrink/postgresql sh -c 'exec shp2pgsql -W "LATIN1" -I -s 2154 /vagrant/shapefile/ne_110m_ocean.shp public.database | psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -d database'
+docker run --link postgis:db -ti -v /vagrant:/vagrant ${IMAGE_NAME} sh -c 'exec psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -f /vagrant/database.sql'
+docker run --link postgis:db -ti -v /vagrant:/vagrant ${IMAGE_NAME} sh -c 'exec shp2pgsql -W "LATIN1" -I -s 2154 /vagrant/shapefile/ne_110m_ocean.shp public.database | psql -h "$DB_PORT_5432_TCP_ADDR" -p "$DB_PORT_5432_TCP_PORT" -U postgres -d database'
 
 echo "== Launching Geoserver image and waiting 2 seconds ..."
 docker run --name ${SERVER_NAME_GEOSERVER} -p 8080:8080 --link ${SERVER_NAME}:${SERVER_NAME} -d -t ${IMAGE_NAME_GEOSERVER}
