@@ -31,7 +31,7 @@ Placez-vous dans le répertoire vagrant.
 
 A présent nous allons lancer le script permettant de récupérer les images [PostgresSQL / PostGIS](https://github.com/jamesbrink/docker-postgresql) et [Geoserver](https://github.com/kartoza/docker-geoserver) sur le site Github. En effet, le lancement de PostGIS et de Geoserver se base sur deux images disponibles sur Github. 
 
-L’image PostGIS écoutera sur le port 5432 et le Geoserver écoutera sur le port 8080. Le script établira un lien entre la base PostGIS créée et le Geoserver. Le script créera par la même occasion un container dynamique qui créera une table et ajoutera une couche shapefile.
+Le script établira un lien entre la base PostGIS créée et le Geoserver. Le script créera par la même occasion un container dynamique qui créera une table et ajoutera une couche shapefile.
 
 `docker@boot2docker: $  /bin/sh runScript.sh`
 
@@ -41,7 +41,7 @@ Le lancement prend quelques minutes. Le mot de passe sera demandé demandés deu
 
 Une fois terminée, assurez-vous que les containers ont bien été créés. Ils sont normalement listés à la fin du script.
 
-**Note** : Si l’un des deux containers (ou les deux) ne s’affichent pas, vous devez alors trouver une nouvelle image sur le site Github. Veillez à choisir les images les plus populaires et lire chacun des readME, avant tout téléchargement.
+**Note** : Si l’un des containers ne s’affichent pas, vous devez alors trouver une nouvelle image sur le site Github. Veillez à choisir les images les plus populaires et lire chacun des readME, avant tout téléchargement.
 
 Vous devez ensuite modifier le script **runScript.sh** en indiquant la nouvelle image postGIS (IMAGE_NAME) ou Geoserver (IMAGE_NAME_GEOSERVER).
 
@@ -49,7 +49,7 @@ Récupérer l’adresse IP du container postGIS qui s’est affiché à la fin d
 
 Connexion au Geoserver
 ---
-Le Geoserver a convenablement été lancé par le script. Vous pouvez maintenant accéder à l’interface de gestion du Geoserver. Pour cela, ouvrir un navigateur web et entrer comme url, localhost:8080 
+Le Geoserver a convenablement été lancé par le script. Vous pouvez maintenant accéder à l’interface de gestion du Geoserver. Pour cela, ouvrir un navigateur web et entrer comme url, localhost:2207 
 
 Voici les informations pour vous connecter au Geoserver :
 
