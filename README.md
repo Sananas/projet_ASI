@@ -1,4 +1,4 @@
-Geoserver connecté base postGIS
+Geoserver connecté à postGIS
 ==========
 Ce répertoire contient le script nécessaire à la création d’un Geoserver connecté à une base PostGIS.
 
